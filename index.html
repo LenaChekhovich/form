@@ -4,22 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Form</title>
 </head>
 
 <body>
-    <form class="form">
+    <form class="form-container">
 
         <div class="header">
-            <button class="header__button" type="submit" aria-label="close">X</button> <!--Слепой человек, использующий вспомогательные технологии, может просто услышать, как "X" читают вслух, что мало что значит без визуальных подсказок. aria-label явно указывает им, что будет делать кнопка.-->
-            <nav class="header__menu menu">
-                <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Форма обратной связи</a></li>
+
+            <button class="header__button" type="submit" aria-label="close"></button> <!--Слепой человек, использующий вспомогательные технологии, может просто услышать, как "X" читают вслух, что мало что значит без визуальных подсказок. aria-label явно указывает им, что будет делать кнопка.-->
+
+            <ul class="header__breadcrumbs breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Контакты</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link breadcrumbs__link--active" href="#">Форма обратной связи</a>
+                    </li>
                 </ul>
-            </nav>
+
             <h1 class="header__title">Форма обратной связи</h1>
         </div>
         
@@ -27,18 +34,21 @@
             <input class="main__name" type="text" placeholder="Иванов Иван Иванович">
             <input class="main__email" type="email" placeholder="Введите Ваш Email">
             <input class="main__number" type="text" placeholder="Введите Ваш телефон">
-            <textarea class="main__textarea" placeholder="Введите Ваше сообщение"></textarea>
+            <textarea class="main__textarea" placeholder="Введите Ваше сообщение"></textarea> <!--или тоже input?-->
         </div>
         
         <div class="footer">
-            <div class="footer__wrap">
+            <div class="footer__box">
+                <div class="footer__inner">
                 <input class="footer__input" type="text">
                 <span class="footer__text">Введите код на картинке справа</span>
             </div>
             <img class="footer__capcha" src="./assets/images/capcha.png" alt="">
-            <button class="footer__button" type="submit" value="submit">Отправить</button>
         </div>
     
+            <button class="footer__button" type="submit" value="submit">Отправить</button>
+        </div>
+        
     </form>
 </body>
 
