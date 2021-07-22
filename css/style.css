@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Montserrat-Bold';
-    src: url(./assets/fonts/Montserrat-Bold.ttf);
+    src: url(../assets/fonts/Montserrat-Bold.ttf);
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url(./assets/fonts/Montserrat-Bold.ttf);
+    src: url(../assets/fonts/Roboto-Regular.ttf);
     font-display: swap;
 }
 
@@ -39,7 +39,7 @@ body:before {
     z-index: 2;
     }
 
-.form-container {
+.form {
     width: 920px;
     height: 820px;
     background-color: #ffffff;
@@ -53,6 +53,21 @@ body:before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.header::before {
+    position: absolute;
+    content: url(../assets/images/wave-line.png);
+    bottom: 152px;
+    left: 425px;
+}
+
+.header::after {
+    position: absolute;
+    content: url(../assets/images/wave-line.png);
+    bottom: 20px;
+    left: 420px;
 }
 
 .header__button {
@@ -68,27 +83,19 @@ body:before {
     position: relative;
 }
 
-.header__button::after {
-    position: absolute;
-    content: url(../assets/images/wave-line.png);
-    bottom: -30px;
-    left: -15px;
-}
-
 ul {
     list-style: none;
     }
 
-    .breadcrumbs {
+    .header__breadcrumbs {
     font-size: 12px;
     line-height: 12px;
-    font-weight: 400;
     display: flex;
     gap: 30px;
     margin-top: 50px;
     }
 
-    .breadcrumbs__link {
+    .header__link {
     text-decoration: none;
     color: #b8b9b9;
     font-family: 'Roboto-Regular', sans-serif;
@@ -97,12 +104,8 @@ ul {
     position: relative;
     }
 
-    .breadcrumbs__link--active {
+    .header__link--active {
     color: #767777;
-    }
-
-    .breadcrumbs__link:hover {
-    text-decoration: underline;
     }
 
     .header__title {
@@ -116,13 +119,6 @@ ul {
     position: relative;
     }
 
-    .header__title::after {
-    position: absolute;
-    content: url(../assets/images/wave-line.png);
-    bottom: -35px;
-    left: 175px;
-}
-
     .main {
     width: 920px;
     height: 432px;
@@ -132,7 +128,6 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25px;
     }
 
     input {
@@ -145,6 +140,7 @@ ul {
     line-height: 20px;
     color: #bdbdbd; /*не работает*/
     resize: none;
+    margin-bottom: 20px;
     }
 
     input:hover {
@@ -165,6 +161,7 @@ ul {
     font-size: 16px;
     line-height: 20px;
     color: #bdbdbd; /*не работает*/
+    resize: none;
     }
 
     textarea:hover {
@@ -184,7 +181,7 @@ ul {
     .footer__box{
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 47px;
     gap: 20px;
     }
 
@@ -203,7 +200,7 @@ ul {
     }
 
     .footer__text {
-    margin-top: 5px;
+    margin-top: -10px;
     font-family: 'Roboto-Regular', sans-serif;
     font-size: 12px;
     line-height: 12px;
@@ -220,10 +217,6 @@ ul {
     font-size: 24px;
     color: #ffffff;
     border: none;
-    margin-top: 60px;
+    margin-top: 45px;
     position: relative;
-    }
-
-    .footer__button:hover {
-        transform: scale(1.1);
     }
